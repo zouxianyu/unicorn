@@ -76,6 +76,8 @@ static int check_exception(CPUX86State *env, int intno, int *error_code,
         env->old_exception = intno;
     }
 
+    env->old_exception = -1;
+
     return intno;
 }
 
